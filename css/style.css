@@ -311,7 +311,7 @@ img {
 .social-links {
   display: flex;
   gap: var(--space-md);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-sm);
 }
 
 .social-links a {
@@ -363,6 +363,10 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-xl);
+}
+
+.footer p{
+  margin-top: var(--space-sm);
 }
 
 .footer-col h4 {
