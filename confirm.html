@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Enviada | UpLink</title>
+  <meta name="description" content="Agradecemos seu contato com a UpLink. Sua mensagem foi enviada com sucesso.">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root {
+      --color-primary: #2371DB;
+      --color-primary-light: #1E90FF;
+      --color-secondary: #00FF87;
+      --color-white: #FFFFFF;
+      --color-light: #F9F9FF;
+      --color-gray: #E0E0E0;
+      --color-dark: #2D3748;
+      --color-black: #000000;
+      --color-footer-bg: #1A202C;
+
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+      --space-xs: 8px;
+      --space-sm: 12px;
+      --space-md: 20px;
+      --space-lg: 40px;
+      --space-xl: 60px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--color-dark);
+      background: var(--color-light);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .header {
+      background: var(--color-white);
+      box-shadow: var(--shadow-sm);
+      padding: var(--space-md) 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      border-radius: 5px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .logo img:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .confirmation-section {
+      padding: var(--space-xl) 0;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .confirmation-content {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--color-white);
+      padding: var(--space-xl);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .confirmation-icon {
+      font-size: 4rem;
+      color: var(--color-secondary);
+      margin-bottom: var(--space-lg);
+      animation: bounce 1s ease infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px); }
+    }
+
+    .confirmation-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+      color: var(--color-primary);
+    }
+
+    .confirmation-content p {
+      margin-bottom: var(--space-xl);
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: var(--space-sm) var(--space-lg);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .footer {
+      background: var(--color-footer-bg);
+      color: var(--color-white);
+      padding: var(--space-xl) 0 0;
+    }
+
+    .footer .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .footer-col h4 {
+      margin-bottom: var(--space-md);
+      font-size: 1.2rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: var(--space-xs);
+    }
+
+    .footer-col a {
+      color: var(--color-gray);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: var(--space-md) 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: var(--space-lg);
+    }
+
+    .footer-bottom p {
+      font-size: 0.9rem;
+      color: var(--color-gray);
+    }
+
+    @media (max-width: 768px) {
+      .confirmation-content {
+        padding: var(--space-lg);
+      }
+      
+      .confirmation-content h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .confirmation-content {
+        padding: var(--space-md);
+      }
+      
+      .confirmation-content h1 {
+        font-size: 1.8rem;
+      }
+      
+      .confirmation-icon {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/Component 1.svg" alt="UpLink" width="140" height="35">
+      </a>
+    </div>
+  </header>
+
+  <section class="confirmation-section">
+    <div class="container">
+      <div class="confirmation-content">
+        <div class="confirmation-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>Mensagem enviada com sucesso!</h1>
+        <p>Obrigado por entrar em contato com a UpLink. Nossa equipe irá analisar sua mensagem e retornaremos em breve.</p>
+        <a href="index.html" class="btn btn-primary">Voltar à página inicial</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-col">
+        <img src="images/favicon.png" alt="UpLink" width="40" height="35">
+        <p>Sua conexão com o digital.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="index.html#sobre">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:contato@uplink.com">uplink.contato@outlook.com</a></li>
+          <li><a href="tel:+55(27) 99292-0133">(27) 99292-0133</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 UpLink. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
